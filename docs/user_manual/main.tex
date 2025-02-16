@@ -86,9 +86,11 @@ Inserisci il nome del file per il report SENZA ESTENSIONE [report]:
 La sorgente dei dati permette di specificare il vettore sui cui verrano applicati gli algoritmi di ordinamento e le matrici che verrano moltiplicate tra loro.
 \begin{itemize}
     \item \textbf{Data file} \\Il data file è un file di input personalizzabile con precaricati un vettore randomico, la matrice di Wilson e la sua inversa. Il file è disponibile al percorso src/data/input.txt.
-    \item \textbf{Dataset} \\ Il dataset è una cartella sorgente composta da due file. \\Il primo file contiene vettori casuali a dimensioni variabili.\\ 
-    Il secondo file contiene 64 matrici di rotazione 3x3. \\
-    Se viene eseguita un'analisi con algortimo matrix multiplication (vedi il prossimo passo), una di queste matrici verrà estratta randomicamente e scalata con una matrice di scalamneto uniforme anch'essa randomica.
+    \item \textbf{Dataset} \\ Il dataset è una cartella sorgente composta da due file. \\
+    Il primo file contiene vettori casuali a dimensioni variabili (dataset\_vector.txt). \\ 
+    Il secondo file contiene 64 matrici di rotazione 3x3 (dataset\_matrix.txt). \\
+    Se viene eseguita un'analisi con algortimo matrix multiplication (vedi il prossimo passo), una di queste matrici verrà estratta randomicamente e scalata con una matrice di scalamento uniforme anch'essa randomica.
+    I file sono disponibili al percorso src/data/dataset.
 \end{itemize}
 Esempio passo 2:
 \begin{tcolorbox}[colback=black, coltext=white, sharp corners, boxrule=0.5mm, width=\textwidth]
@@ -131,7 +133,7 @@ Esempio passo 4:
 \paragraph{Passo 5: Configura la modalità}\leavevmode\\
 A seconda della scelta effettuata precedentemente, ci sono due modalità di configurazione disponibili:
 
-\subparagraph{1) Modalità "Singolo algoritmo"}\leavevmode\\
+\subparagraph{1) Per la Modalità "Singolo algoritmo"}\leavevmode\\
 \hangindent=1.5em \hangafter=1  
 Dopo aver selezionato un algoritmo specifico, è possibile configurare la modalità scegliendo tra le seguenti opzioni:
 \begin{itemize}
@@ -148,7 +150,7 @@ Scegli una modalità di single analysis: \\
 \hspace{2.5em}Tre esecuzioni con cardinalità della fault list entry che varia [1000, 2000, 3000]
 \end{tcolorbox}
 
-\subparagraph{2) Modalità "Tutti gli algoritmi"}\leavevmode\\
+\subparagraph{2) Per la Modalità "Tutti gli algoritmi"}\leavevmode\\
 \hangindent=1.5em \hangafter=1  
 Se è stata selezionata l'opzione \textbf{Tutti gli algoritmi}, la modalità di analisi è predefinita. Tuttavia, è possibile modificare la cardinalità della fault list:
 \begin{itemize}
@@ -254,21 +256,21 @@ Il report generato conterrà i risultati dell'analisi comparativa tra tutti gli 
 \begin{figure}[h!]
     \centering
     % Prima riga con due immagini affiancate
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.33\textwidth}
         \centering
         \fbox{\includegraphics[width=\textwidth]{img/1.png}}
         \caption{Pagina 1}
     \end{minipage}
     \hfill
-    \begin{minipage}{0.4\textwidth}
+    \begin{minipage}{0.33\textwidth}
         \centering
         \fbox{\includegraphics[width=\textwidth]{img/2.png}}
         \caption{Pagina 2}
     \end{minipage}
 
     % Seconda riga con una sola immagine
-    \vspace{0.5cm} % Spaziatura tra le righe
-    \begin{minipage}{0.4\textwidth}
+    \vspace{0.2cm} % Spaziatura tra le righe
+    \begin{minipage}{0.33\textwidth}
         \centering
         \fbox{\includegraphics[width=\textwidth]{img/3.png}}
         \caption{Pagina 3}
